@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import cx from 'classnames';
 import { setMobileNavVisibility } from '../../reducers/Layout';
@@ -7,20 +7,13 @@ import { withRouter } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
-import SideBar from '../../components/SideBar';
-import ThemeOptions from '../../components/ThemeOptions';
-import MobileMenu from '../../components/MobileMenu';
 /**
  * Pages
  */
+import Finance from '../Finance';
+import Conversions from '../Conversions';
 import Dashboard from '../Dashboard';
-import Components from '../Components';
-import UserProfile from '../UserProfile';
-import MapsPage from '../MapsPage';
-import Forms from '../Forms';
-import Charts from '../Charts';
-import Calendar from '../Calendar';
-import Tables from '../Tables';
+
 
 const Main = ({
   mobileNavVisibility,
@@ -38,18 +31,14 @@ const Main = ({
     })}>
       <div className="wrapper">
         <div className="close-layer" onClick={hideMobileMenu}></div>
-        <SideBar />
-
-        <div className="main-panel">
           <Header />
-          <Route exact path="/" component={Dashboard} />
-          <Route path="/components" component={Components} />
-          <Route path="/profile" component={UserProfile} />
-          <Route path="/forms" component={Forms} />
-          <Route path="/tables" component={Tables} />
-          <Route path="/maps" component={MapsPage} />
-          <Route path="/charts" component={Charts} />
-          <Route path="/calendar" component={Calendar} />
+          <div className="main-panel">
+          <Route path="/finance" component={Finance} />
+          <Route path="/convertor" component={Conversions} />
+          <Route path="/" exact>
+            <Redirect to="/finance/compound-interest" />
+          </Route>
+          {/* <Route path="/" component={Dashboard} /> */}
           <Footer />
         </div>
       </div>

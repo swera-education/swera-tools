@@ -81,3 +81,156 @@ html, body {
     margin-bottom: 0;
   }
 }
+.calculator-form {
+  margin: auto;
+  max-width: 330px;
+  background: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.calculator-field {
+  padding: 7px 20px;
+}
+
+.submit-button {
+  text-align: right;
+  margin: 15px;
+}
+
+.currency-box {
+  clear: both;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.radio-switch {
+  display: flex;
+  font-family: Arial,sans-serif;
+}
+
+.radio-div-50 div {
+  width: 50%;
+}
+
+.radio-switch input {
+  position: absolute!important;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.radio-switch .radio .icons {
+  position: absolute!important;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.radio-switch label {
+  width: 100%;
+  text-align: -webkit-center;
+  background-color: #e6e6e6;
+  color: #777;
+  font-size: 15px;
+  line-height: 1;
+  padding: 12px 16px;
+  margin-right: -1px;
+  border: 1px solid #aaa;
+  box-shadow: inset 0 1px 3px rgb(0, 0, 0.3), 0 1px rgb(215, 244, 176);
+  transition: all .1s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.radio-switch .checked {
+  background-color: #1DC7EA;
+  color: #fff;
+  box-shadow: none;
+}
+
+.values-header {
+  color: #1DC7EA;
+  font-weight: 600 !important;
+  margin: 0 0 15px !important;
+}
+
+span.clearElement {
+  display: block;
+  clear: both;
+}
+
+.drop-select select {
+  box-sizing: border-box;
+    height: 33.2px;
+    border: 0.6px solid rgba(37, 38, 95, 0.2);
+    border-radius: 2px;
+    background-color: #F5F9FC;
+    color: #565656;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.formula {
+  margin-left: 0;
+  margin-top: 8px;
+  font-size: 24px;
+  padding: 1em 10px 10px 30px;
+  line-height: 27px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 5px;
+  padding: .5em 15px;
+  quotes: "\201C""\201D";
+}
+
+.logoImage {
+  font-family: fantasy;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+  text-shadow: 0 0 black;
+
+}
+
+.navStyle {
+  background: #1DC7EA !important;
+}
+
+.brand {
+  padding-top: 0px;
+}
+.navbar .navbar-nav > li > a .caret{
+  color: #fff !important;
+}
+.nav-toggle{
+  color: #fff;
+  font-size:15px;
+  padding-top:5px;
+}
+.nav .open>a .nav-toggle{
+  color: #000 !important;
+}
+
+.mg-b-0 {
+  margin-bottom: 0px !important;
+}

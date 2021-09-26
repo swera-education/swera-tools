@@ -18,12 +18,12 @@ This package includes:
 
 In order to keep our stylesheet easy to maintain and customize by everyone. Stylesheet is writen by SCSS.
 
-**[Live preview](https://jslancerteam.github.io/crystal-dashboard/#/)**
+**[Live preview](https://jslancerteam.github.io/swera-tools/#/)**
 
 ## Get started
 *Development*
 ```
-git clone https://github.com/jslancerteam/crystal-dashboard
+git clone https://github.com/jslancerteam/swera-tools
 npm install
 npm start
 ```

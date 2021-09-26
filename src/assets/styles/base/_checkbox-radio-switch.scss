@@ -99,11 +99,11 @@
   text-align: left;
   width: 60px;
 
- -webkit-user-select: none;
- -moz-user-select: none;
- -ms-user-select: none;
- -o-user-select: none;
- user-select: none;
+//  -webkit-user-select: none;
+//  -moz-user-select: none;
+//  -ms-user-select: none;
+//  -o-user-select: none;
+//  user-select: none;
 
   /*   this code is for fixing safari bug with hidden overflow for border-radius   */
   -webkit-mask: url('assets/images/mask.png') 0 0 no-repeat;

@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { toggleMobileNavVisibility } from '../../reducers/Layout';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl } from 'react-bootstrap';
 
 const Header = ({
-  showMobileMenu,
   toggleMobileNavVisibility
 }) => (
-    <Navbar fluid={true}>
+    <Navbar fluid={true} className="navStyle">
       <Navbar.Header>
         <button type="button" className="navbar-toggle" data-toggle="collapse" onClick={toggleMobileNavVisibility}>
           <span className="sr-only">Toggle navigation</span>
@@ -16,36 +16,33 @@ const Header = ({
           <span className="icon-bar"></span>
         </button>
       </Navbar.Header>
-
       <Navbar.Collapse>
-
         <Nav>
-          <NavItem><i className="fa fa-dashboard"></i></NavItem>
-          <NavDropdown title={<i className="fa fa-globe" />} id="basic-nav-dropdown">
-            <MenuItem>Action</MenuItem>
-            <MenuItem>Another action</MenuItem>
-            <MenuItem>Something else here</MenuItem>
+          <NavItem>
+          <div className="brand">
+              {/* <img src={swera} alt="logo" className="logoImage" /> */}
+              <span className="logoImage"><i className="fa fa-book" style={{'font-size':'25px'}}></i> Swera Techno</span>
+          </div>
+          </NavItem>
+          </Nav>
+          <div className="separator"></div>
+          <Nav>
+          <NavDropdown title={<span className="nav-toggle"><i className="pe-7s-calculator"/>Finance</span>} id="basic-nav-dropdown" className="nav-dropdown">
+            <MenuItem><Link to="/finance/compound-interest">Compount Interest Calculator</Link></MenuItem>
             <MenuItem divider />
-            <MenuItem>Separated link</MenuItem>
+            <MenuItem><Link to="/finance/sip-calculator">SIP Calcualator</Link></MenuItem>
+            <MenuItem divider />
+            <MenuItem><Link to="/finance/fd-calculator">FD Calcualator</Link></MenuItem>
+            <MenuItem divider />
+            <MenuItem><Link to="/finance/lumpsum-calculator">Lumpsum Calcualator</Link></MenuItem>
+            <MenuItem divider />
+            <MenuItem><Link to="/finance/ppf-calculator">PPF Calcualator</Link></MenuItem>
           </NavDropdown>
         </Nav>
-        <div className="separator"></div>
-        <Navbar.Form pullLeft>
-          <FormGroup>
-            <span className="input-group-addon"><i className="fa fa-search"></i></span>
-            <FormControl type="text" placeholder="Type to search" />
-          </FormGroup>
-        </Navbar.Form>
         <Nav pullRight>
-          <NavItem>Account</NavItem>
-          <NavDropdown title="Dropdown" id="right-nav-bar">
-            <MenuItem>Action</MenuItem>
-            <MenuItem>Another action</MenuItem>
-            <MenuItem>Something else here</MenuItem>
-            <MenuItem divider />
-            <MenuItem>Separated link</MenuItem>
-          </NavDropdown>
-          <NavItem>Log out</NavItem>
+          <NavItem href="https://www.youtube.com/channel/UCStyfvVXwIUAfQb1vwW2GmQ" target="_blank"><i className="fa fa-youtube" style={{color: '#FFF', "font-size":"25px"}}></i></NavItem>
+          <NavItem href="https://www.facebook.com/SweRa-Education-104252292006741" target="_blank"><i className="fa fa-facebook" style={{color: '#FFF', "font-size":"25px"}}></i></NavItem>
+          <NavItem href="https://twitter.com/swera_tech?s=09" target="_blank"><i className="fa fa-twitter" style={{color: '#FFF', "font-size":"25px"}}></i></NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -55,4 +52,4 @@ const mapDispatchToProp = dispatch => ({
   toggleMobileNavVisibility: () => dispatch(toggleMobileNavVisibility())
 });
 
-export default connect(null, mapDispatchToProp)(Header);
+export default  withRouter(connect(null, mapDispatchToProp)(Header));
